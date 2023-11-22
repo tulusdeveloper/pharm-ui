@@ -10,6 +10,26 @@ import 'material-icons/iconfont/material-icons.css';
 
 class Login extends React.Component {
 
+    state={
+        username:'',
+        password:'',
+        btnDisabled:true,
+    };
+    saveInputs=(event)=>{
+        var key=event.target.name;
+        this.setState({[key]:event.target.value});
+        if(this.state.username !="" && this.state.password !=""){
+            this.setState({btnDisabled:false});
+        }
+        else{
+            this.setState({btnDisabled:true});
+        }
+    };
+    formSubmit=(event)=>{
+        event.preventDefault();
+        console.log(this.state);
+    };
+
     render() {
         document.body.className = "login-page";
 
@@ -34,19 +54,18 @@ class Login extends React.Component {
 
             <div className="login-box">
                 <div className="logo">
-                    <a href="#">Admin<b>BSB</b></a>
-                    <small>Admin BootStrap Based - Material Design</small>
+                    <a href="#">Medical Store Management System</a>
                 </div>
                 <div className="card">
                     <div className="body">
-                        <form id="sign_in" method="POST">
+                        <form id="sign_in" method="POST" onSubmit={this.formSubmit}>
                             <div className="msg">Sign in to start your session</div>
                             <div className="input-group">
                                 <span className="input-group-addon">
                                     <i className="material-icons">person</i>
                                 </span>
                                 <div className="form-line">
-                                    <input type="text" className="form-control" name="username" placeholder="Username" required autoFocus/>
+                                    <input type="text" className="form-control" name="username" placeholder="Username" required autoFocus onChange={this.saveInputs} />
                                 </div>
                             </div>
                             <div className="input-group">
@@ -54,24 +73,24 @@ class Login extends React.Component {
                                     <i className="material-icons">lock</i>
                                 </span>
                                 <div className="form-line">
-                                    <input type="password" className="form-control" name="password" placeholder="Password" required/>
+                                    <input type="password" className="form-control" name="password" placeholder="Password" required onChange={this.saveInputs} />
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-xs-8 p-t-5">
-                                    <input type="checkbox" name="rememberme" id="rememberme" className="filled-in chk-col-pink"/>
+                                    <input type="checkbox" name="rememberme" id="rememberme" className="filled-in chk-col-pink" onChange={this.saveInputs}/>
                                         <label for="rememberme">Remember Me</label>
                                 </div>
                                 <div className="col-xs-4">
-                                    <button className="btn btn-block bg-pink waves-effect" type="submit">SIGN IN</button>
+                                    <button className="btn btn-block bg-pink waves-effect" type="submit" disabled={this.state.btnDisabled} >SIGN IN</button>
                                 </div>
                             </div>
                             <div className="row m-t-15 m-b--20">
                                 <div className="col-xs-6">
-                                    <a href="sign-up.html">Register Now!</a>
+                                    <a href="#">Register Now!</a>
                                 </div>
                                 <div className="col-xs-6 align-right">
-                                    <a href="forgot-password.html">Forgot Password?</a>
+                                    <a href="#">Forgot Password?</a>
                                 </div>
                             </div>
                         </form>
