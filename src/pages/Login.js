@@ -6,7 +6,7 @@ import 'adminbsb-materialdesign/css/style.css';
 import GoogleFontLoader from 'react-google-fonts';
 import 'material-icons/iconfont/material-icons.css';
 import AuthHandler from "../utils/AuthHandler";
-import Config from "../utils/Config";
+// import Config from "../utils/Config";
 
 
 
@@ -99,7 +99,7 @@ class Login extends React.Component {
 
                 <div className="login-box">
                     <div className="logo">
-                        <a href="#">Medical Store Management System</a>
+                        <a href="/">PHARMACY SYSTEM</a>
                     </div>
                     <div className="card">
                         <div className="body">
@@ -132,10 +132,10 @@ class Login extends React.Component {
                                 </div>
                                 <div className="row m-t-15 m-b--20">
                                     <div className="col-xs-6">
-                                        <a href="#">Register Now!</a>
+                                        <a href="/">Register Now!</a>
                                     </div>
                                     <div className="col-xs-6 align-right">
-                                        <a href="#">Forgot Password?</a>
+                                        <a href="/">Forgot Password?</a>
                                     </div>
                                 </div>
                             </form>
