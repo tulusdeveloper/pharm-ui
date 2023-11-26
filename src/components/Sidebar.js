@@ -53,12 +53,7 @@ class Sidebar extends React.Component {
                         <div className={this.state.defaultClass}>
                             <i className="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onClick={this.showLogoutMenu} rev={this.divref}>keyboard_arrow_down</i>
                             <ul className="dropdown-menu pull-right">
-
-
-
-
-
-
+                                
                                 <li><a href="javascript:void(0);" className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
                             </ul>
                         </div>
@@ -67,7 +62,7 @@ class Sidebar extends React.Component {
 
 
                 <div className="menu">
-                    <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto', height: '489px' }}><ul className="list" style={{ overflow: 'hidden', width: 'auto', height: '489px' }}>
+                   <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto', height: '489px' }}><ul className="list" style={{ overflow: 'hidden', width: 'auto', height: '489px' }}>
 
                         <li className="active">
                             <a href="index.html" className="toggled waves-effect waves-block">
@@ -88,7 +83,7 @@ class Sidebar extends React.Component {
                         © 2023 - 2027 <a href="javascript:void(0);">Tulus - Developer</a>.
                     </div>
                     <div className="version">
-                        <b>Version: </b> 1.0.5
+                        <b>Version: </b> 0.1.0
                     </div>
                 </div>
 

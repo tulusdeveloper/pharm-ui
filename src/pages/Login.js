@@ -6,7 +6,7 @@ import 'adminbsb-materialdesign/css/style.css';
 import GoogleFontLoader from 'react-google-fonts';
 import 'material-icons/iconfont/material-icons.css';
 import AuthHandler from "../utils/AuthHandler";
-// import Config from "../utils/Config";
+import Config from "../utils/Config";
 
 
 
@@ -46,6 +46,7 @@ class Login extends React.Component {
         }
         else {
             this.setState({ loginStatus: 3 });
+            window.location = Config.homeUrl;
         }
     };
     getMessages = () => {
