@@ -7,6 +7,7 @@ import GoogleFontLoader from 'react-google-fonts';
 import 'material-icons/iconfont/material-icons.css';
 import AuthHandler from "../utils/AuthHandler";
 import Config from "../utils/Config";
+import { Navigate } from "react-router-dom";
 
 
 
@@ -77,6 +78,9 @@ class Login extends React.Component {
     }
 
     render() {
+        if (AuthHandler.loggedIn()) {
+            return <Navigate to={Config.homeUrl} />;
+        }
         document.body.className = "login-page";
 
         return (

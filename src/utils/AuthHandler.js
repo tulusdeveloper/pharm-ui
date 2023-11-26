@@ -16,5 +16,14 @@ class AuthHandler{
         callback({error:true,message:"Error During Login Invalid Login Details .."});
       })
     }
+
+    static loggedIn(){
+      if(reactLocalStorage.get("token") && reactLocalStorage.get("refresh")) {
+        return true;
+      } else {
+        return false;
+      }
+      
+    }
 }
 export default AuthHandler;
