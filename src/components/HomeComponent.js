@@ -4,9 +4,7 @@ class HomeComponent extends React.Component{
     render(){
         return <section className="content">
         <div className="container-fluid">
-            <div className="block-header">
-                <h2>DASHBOARD</h2>
-            </div>
+           
 
             <div className="row clearfix">
                 <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">

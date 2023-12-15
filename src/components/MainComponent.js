@@ -11,16 +11,16 @@ import 'adminbsb-materialdesign/css/themes/all-themes.css'
 class MainComponent extends React.Component {
 
     state={
-        bodyClass:"theme-red ls-closed",
+        bodyClass:"theme-green ls-closed",
         displayOverlay:"none",
     };
     onBarClick=()=>{
-        if(this.state.bodyClass==="theme-red ls-closed overlay-open"){
-        this.setState({ bodyClass:"theme-red ls-closed" });
+        if(this.state.bodyClass==="theme-green ls-closed overlay-open"){
+        this.setState({ bodyClass:"theme-green ls-closed" });
         this.setState({displayOverlay:"none"});
         }
-        else if(this.state.bodyClass==="theme-red ls-closed"){
-        this.setState({ bodyClass:"theme-red ls-closed overlay-open" });
+        else if(this.state.bodyClass==="theme-green ls-closed"){
+        this.setState({ bodyClass:"theme-green ls-closed overlay-open" });
         this.setState({displayOverlay:"block"});
         }
     };
