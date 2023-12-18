@@ -1,5 +1,6 @@
 import React from "react";
 import usericon from "adminbsb-materialdesign/images/user.png";
+import Config from "../utils/Config";
 
 class Sidebar extends React.Component {
 
@@ -62,16 +63,15 @@ class Sidebar extends React.Component {
 
 
                 <div className="menu">
-                   <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto', height: '489px' }}><ul className="list" style={{ overflow: 'hidden', width: 'auto', height: '489px' }}>
-
-                        <li className="active">
-                            <a href="index.html" className="toggled waves-effect waves-block">
-                                <i className="material-icons">home</i>
-                                <span>Home</span>
-                            </a>
-                        </li>
-
-
+                   <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto'}}><ul className="list" style={{ overflow: 'hidden', width: 'auto'}}>
+                    {Config.SidebarItem.map(
+                        (item)=><li className="active">
+                        <a href={item.url} className="toggled waves-effect waves-block">
+                            <i className="material-icons">{item.icons}</i>
+                            <span>{item.title}</span>
+                        </a>
+                    </li>
+                    )}
                     </ul>
                         <div className="slimScrollBar" style={{ background: 'rgba(0, 0, 0, 0.5)', width: '4px', position: 'absolute', top: '0px', opacity: '0.4', display: 'block', borderRadius: '0px', zIndex: '99', right: '1px', height: '257.119px' }}></div><div className="slimScrollRail" style={{ width: '4px', height: '100%', position: 'absolute', top: '0px', display: 'none', borderRadius: '0px', background: 'rgb(51, 51, 51)', opacity: '0.2', zIndex: '90', right: '1px' }}></div>
                     </div>
