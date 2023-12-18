@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import usericon from "adminbsb-materialdesign/images/user.png";
 import Config from "../utils/Config";
 
@@ -66,10 +67,10 @@ class Sidebar extends React.Component {
                    <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto'}}><ul className="list" style={{ overflow: 'hidden', width: 'auto'}}>
                     {Config.SidebarItem.map(
                         (item)=><li className={item.index == this.props.activepage ? "active" : ""} key={item.index}>
-                        <a href={item.url} className="toggled waves-effect waves-block">
+                        <Link to={item.url} className="toggled waves-effect waves-block">
                             <i className="material-icons">{item.icons}</i>
                             <span>{item.title}</span>
-                        </a>
+                        </Link>
                     </li>
                     )}
                     </ul>
