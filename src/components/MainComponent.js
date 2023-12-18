@@ -26,6 +26,9 @@ class MainComponent extends React.Component {
     };
 
     render() {
+
+        const { activepage } = this.props;
+
         if (window.innerWidth > 1150){
             document.getElementById("root").className = "theme-red";
         } else {
@@ -52,7 +55,7 @@ class MainComponent extends React.Component {
 
             <Overlay display={this.state.displayOverlay} />
 			<Navbar onBarClick={this.onBarClick} />
-			<Sidebar />
+			<Sidebar activepage={activepage} />
 			<>{this.props.HomeComponent}</>
 			<PageLoader />
 

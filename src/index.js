@@ -19,9 +19,9 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<Login />} path="/" />
-      <Route element={<PrivateRouteNew />}>
+      <Route element={<PrivateRouteNew activepage="0" />}>
         <Route element={<MainComponent />} path="/home" exact />
-        <Route element={<CompanyComponent />} path="/company" exact />
+        <Route element={<CompanyComponent />} path="/company" exact  activepage="1"/>
       </Route>
     </Routes>
   </BrowserRouter>

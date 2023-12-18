@@ -65,7 +65,7 @@ class Sidebar extends React.Component {
                 <div className="menu">
                    <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto'}}><ul className="list" style={{ overflow: 'hidden', width: 'auto'}}>
                     {Config.SidebarItem.map(
-                        (item)=><li className="active">
+                        (item)=><li className={item.index == this.props.activepage ? "active" : ""} key={item.index}>
                         <a href={item.url} className="toggled waves-effect waves-block">
                             <i className="material-icons">{item.icons}</i>
                             <span>{item.title}</span>
