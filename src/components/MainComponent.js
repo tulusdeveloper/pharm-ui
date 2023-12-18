@@ -1,12 +1,12 @@
 import React from "react";
 import Overlay from './Overlay'
-import HomeComponent from './HomeComponent'
 import Navbar from './Navbar'
 import PageLoader from './PageLoader'
 import Sidebar from './Sidebar'
 import GoogleFontLoader from 'react-google-fonts';
 import 'material-icons/iconfont/material-icons.css';
 import 'adminbsb-materialdesign/css/themes/all-themes.css'
+import HomeComponent from "../pages/HomeComponent";
 
 class MainComponent extends React.Component {
 
@@ -51,10 +51,10 @@ class MainComponent extends React.Component {
             />
 
             <Overlay display={this.state.displayOverlay} />
-            <Navbar onBarClick={this.onBarClick} />
-            <Sidebar />
-            <HomeComponent />
-            <PageLoader />
+			<Navbar onBarClick={this.onBarClick} />
+			<Sidebar />
+			<>{this.props.HomeComponent}</>
+			<PageLoader />
 
         </React.Fragment>;
     }

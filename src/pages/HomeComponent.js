@@ -1,11 +1,9 @@
 import React from "react";  
 
-class HomeComponent extends React.Component{
+class CompanyComponent extends React.Component{
     render(){
         return <section className="content">
         <div className="container-fluid">
-           
-
             <div className="row clearfix">
                 <div className="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div className="info-box bg-pink hover-expand-effect">
@@ -52,16 +50,9 @@ class HomeComponent extends React.Component{
                     </div>
                 </div>
             </div>
-            
-            
-            
-            
-            
-
-            
         </div>
     </section>;
     }
 }
 
-export default HomeComponent;
+export default CompanyComponent;
