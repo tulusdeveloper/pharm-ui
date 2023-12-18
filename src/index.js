@@ -10,6 +10,8 @@ import Login from "./pages/Login";
 import MainComponent from "./components/MainComponent";
 import { PrivateRouteNew } from "./utils/PrivateRouteNew";
 import CompanyComponent from "./pages/CompanyComponent";
+import LogoutComponent from "./pages/LogoutComponent";
+import Config from "./utils/Config";
 
 
 const container = document.getElementById("root");
@@ -19,9 +21,10 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route element={<Login />} path="/" />
-      <Route element={<PrivateRouteNew activepage="0" />}>
-        <Route element={<MainComponent />} path="/home" exact />
-        <Route element={<CompanyComponent />} path="/company" exact  activepage="1"/>
+      <Route element={LogoutComponent} path={Config.logoutPageUrl} />
+      <Route element={<PrivateRouteNew />}>
+        <Route element={<MainComponent activepage="0" />} path="/home" exact />
+        <Route element={<CompanyComponent activepage="1" />} path="/company" exact />
       </Route>
     </Routes>
   </BrowserRouter>
