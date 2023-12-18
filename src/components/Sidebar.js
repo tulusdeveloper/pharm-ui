@@ -56,7 +56,7 @@ class Sidebar extends React.Component {
                             <i className="material-icons" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" onClick={this.showLogoutMenu} rev={this.divref}>keyboard_arrow_down</i>
                             <ul className="dropdown-menu pull-right">
                                 
-                                <li><a href="javascript:void(0);" className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
+                                <li><a href="#" className=" waves-effect waves-block"><i className="material-icons">input</i>Sign Out</a></li>
                             </ul>
                         </div>
                     </div>
@@ -66,7 +66,7 @@ class Sidebar extends React.Component {
                 <div className="menu">
                    <div className="slimScrollDiv" style={{ position: 'relative', overflow: 'hidden', width: 'auto'}}><ul className="list" style={{ overflow: 'hidden', width: 'auto'}}>
                     {Config.SidebarItem.map(
-                        (item)=><li className={item.index == this.props.activepage ? "active" : ""} key={item.index}>
+                        (item)=><li key={item.index} className={item.index == this.props.activepage ? "active" : ""} >
                         <Link to={item.url} className="toggled waves-effect waves-block">
                             <i className="material-icons">{item.icons}</i>
                             <span>{item.title}</span>
@@ -81,7 +81,7 @@ class Sidebar extends React.Component {
 
                 <div className="legal">
                     <div className="copyright">
-                        © 2023 - 2027 <a href="javascript:void(0);">Tulus - Developer</a>.
+                        © 2023 - 2027 <a href="#">Tulus - Developer</a>.
                     </div>
                     <div className="version">
                         <b>Version: </b> 0.1.0

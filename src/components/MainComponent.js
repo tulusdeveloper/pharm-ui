@@ -11,25 +11,40 @@ import HomeComponent from "../pages/HomeComponent";
 class MainComponent extends React.Component {
 
     state={
-        bodyClass:"theme-green ls-closed",
+        bodyClass:"theme-red ls-closed",
         displayOverlay:"none",
+        width: window.screen.width,
     };
     onBarClick=()=>{
-        if(this.state.bodyClass==="theme-green ls-closed overlay-open"){
-        this.setState({ bodyClass:"theme-green ls-closed" });
+        if(this.state.bodyClass==="theme-red ls-closed overlay-open"){
+        this.setState({ bodyClass:"theme-red ls-closed" });
         this.setState({displayOverlay:"none"});
         }
-        else if(this.state.bodyClass==="theme-green ls-closed"){
-        this.setState({ bodyClass:"theme-green ls-closed overlay-open" });
+        else if(this.state.bodyClass==="theme-red ls-closed"){
+        this.setState({ bodyClass:"theme-red ls-closed overlay-open" });
         this.setState({displayOverlay:"block"});
         }
     };
+
+    onscreenresize = () =>{
+        console.log(window.screen.width);
+        this.setState({width:window.screen.width});
+    }
+
+    componentWillMount(){
+        window.addEventListener('resize',this.onscreenresize);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize',this.onscreenresize);
+
+    }
 
     render() {
 
         const { activepage } = this.props;
 
-        if (window.innerWidth > 1150){
+        if (this.state.width > 1150){
             document.getElementById("root").className = "theme-red";
         } else {
             document.getElementById("root").className = this.state.bodyClass;
