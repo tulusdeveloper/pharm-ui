@@ -39,6 +39,8 @@ class MainComponent extends React.Component {
         window.removeEventListener('resize',this.onscreenresize);
 
     }
+
+    // This method is for highlighting working text field focus
     componentDidMount() {
         var inputall = document.querySelectorAll("input");
         inputall.forEach((input)=>{

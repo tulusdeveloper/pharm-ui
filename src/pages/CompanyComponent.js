@@ -4,6 +4,13 @@ import { PrivateRouteNew } from "../utils/PrivateRouteNew";
 import AuthHandler from "../utils/AuthHandler";
 
 class CompanyComponent extends React.Component{
+
+    async formSubmit(event){
+        event.preventDefault();
+        var APIHandler = new AuthHandler();
+        APIHandler.saveCompanyData();
+    }
+
     render(){
         return <section className="content">
         <div className="container-fluid">
@@ -20,7 +27,7 @@ class CompanyComponent extends React.Component{
                           
                         </div>
                         <div className="body">
-                            <form>
+                            <form onSubmit={this.formSubmit}>
                                 <label htmlFor="email_address">Name</label>
                                 <div className="form-group">
                                     <div className="form-line">
@@ -65,7 +72,7 @@ class CompanyComponent extends React.Component{
                                
 
                                 <br/>
-                                <button type="button" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Company</button>
+                                <button type="submit" className="btn btn-primary m-t-15 waves-effect-btn-block">Add Company</button>
                             </form>
                         </div>
                     </div>

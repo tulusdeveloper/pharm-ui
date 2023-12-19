@@ -1,5 +1,6 @@
 class Config{
     static loginUrl="http://127.0.0.1:8000/api/gettoken/";
+    static refreshAPIUrl="http://127.0.0.1:8000/api/resfresh_token/";
     static homeUrl = "/home";
     static logoutPageUrl = "/logout";
 
